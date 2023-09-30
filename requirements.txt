@@ -1,9 +1,0 @@
-tensorflow
-pandas
-numpy
-matplotlib
-pyprind
-scikit-learn
-scipy
-jupyter
-Pillow
