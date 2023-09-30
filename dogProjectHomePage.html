@@ -26,6 +26,22 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             z-index: 999; /* Ensure it appears above other content */
         }
 
+        /* Style for the speech recognition button */
+        #startRecognition {
+            background-color: #007BFF; /* Button background color */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        #startRecognition:hover {
+            background-color: #0056b3; /* Button background color on hover */
+        }
+
         /* Additional styles for the content */
         body {
             margin: 0;
