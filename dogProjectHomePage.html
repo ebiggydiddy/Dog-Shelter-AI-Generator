@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+    // Speech recognition is supported
+} else {
+    // Speech recognition is not supported
+}
+  </script>
 <style>
   body {margin:0;}
   
+  .speech-recognition-container {
+            position: fixed;
+            top: 10px; /* Adjust this value to change the vertical position */
+            right: 10px; /* Adjust this value to change the horizontal position */
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 999; /* Ensure it appears above other content */
+        }
+
+        /* Additional styles for the content */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Add some content to demonstrate the fixed button */
+        .content {
+            padding: 20px;
+        }
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -40,6 +70,24 @@
   }
   </style>
 <body>
+  <div class="speech-recognition-container">
+    <button id="startRecognition">Start Recognition</button>
+    <div id="output"></div>
+</div>
+
+<!-- Content to demonstrate the fixed button -->
+<div class="content">
+    <h1>Website Content</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non dui et ex euismod fermentum.</p>
+    <!-- Add your website content here -->
+</div>
+
+<script>
+    // JavaScript for speech recognition (as shown in the previous answer)
+    const recognition = new SpeechRecognition() || webkitSpeechRecognition();
+    // Add event listeners and other code here...
+</script>
+
     <div style="width: 1680px; height: 960px; background: white; justify-content: center; align-items: flex-start; display: inline-flex">
         <div style="width: 840px; height: 960px; position: relative">
           <div style="width: 840px; height: 960px; left: 0px; top: 0px; position: absolute; background: #2F3061"></div>
@@ -53,7 +101,7 @@
           </div>
         </div>
         <div style="flex: 1 1 0; align-self: stretch; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-          <img style="width: 840px; height: 960px; border: 1px rgba(0, 0, 0, 0.30) solid" src="https://via.placeholder.com/840x960" />
+          <img style="width: 840px; height: 960px; border: 1px rgba(0, 0, 0, 0.30) solid" src="./img/homeDog.jpg" />
         </div>
       </div>
       <div style="width: 1680px; height: 784px; position: relative; background: #DFDFDF">
@@ -62,10 +110,9 @@
           <div style="width: 778.61px; height: 38.62px; color: #2F3061; font-size: 48px; font-family: Vollkorn; font-weight: 700; line-height: 72px; word-wrap: break-word">Why Support Animal Welfare?</div>
         </div>
         <div style="width: 1002px; height: 133px; left: 339px; top: 134px; position: absolute"><span style="color: rgba(0, 0, 0, 0.80); font-size: 18px; font-family: Montserrat; font-weight: 400; line-height: 30px; word-wrap: break-word">       </span><span style="color: rgba(0, 0, 0, 0.80); font-size: 28px; font-family: Montserrat; font-weight: 400; line-height: 30px; word-wrap: break-word">  </span><span style="color: rgba(0, 0, 0, 0.80); font-size: 28px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> Animal welfare and rights continues to be a relevant social issue as millions of dogs and cats are left free-roaming the streets with insufficient access to water, food, and protection from disease. And for the animals that do get picked up by shelters, up to 4 million are euthanized due to infirmity, age, and rambunctious behavior (1).</span></div>
-        <img style="width: 735px; height: 455px; left: 473px; top: 279px; position: absolute; box-shadow: 15px 20px 4px rgba(0, 0, 0, 0.25); border: 1px black solid" src="https://via.placeholder.com/735x455" />
+        <img style="width: 735px; height: 455px; left: 473px; top: 279px; position: absolute; box-shadow: 15px 20px 4px rgba(0, 0, 0, 0.25); border: 1px black solid" src="./img/allDog.png" />
       </div>
       <div style="width: 1680px; height: 804px; position: relative; background: #DFDFDF">
-        <div style="width: 778.61px; height: 38.62px; left: 497px; top: -349px; position: absolute; color: #2F3061; font-size: 48px; font-family: Vollkorn; font-weight: 700; line-height: 72px; word-wrap: break-word">Why Support Animal Welfare?</div>
         <div style="width: 1545px; height: 603px; left: 40px; top: 218px; position: absolute"><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word">         With this prevalent issue of animal welfare it can be broken into the “codified Five Freedoms” (2) which are:<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 700; line-height: 30px; word-wrap: break-word">Freedom from Hunger and Thirst:</span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> by ready access to fresh water and a diet to maintain full health and vigor.<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 700; line-height: 30px; word-wrap: break-word">Freedom from Discomfort:</span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> by providing an appropriate environment including shelter and a comfortable resting area.<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 700; line-height: 30px; word-wrap: break-word">Freedom from Pain, Injury or Disease:</span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> by prevention or rapid diagnosis and treatment<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 700; line-height: 30px; word-wrap: break-word">Freedom to Express Normal Behavior:</span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> by providing sufficient space, proper facilities and company of the animal’s own kind.<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 700; line-height: 30px; word-wrap: break-word">Freedom from Fear and Distress:</span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word"> by ensuring conditions and treatment which avoid mental suffering.<br/></span><span style="color: black; font-size: 34px; font-family: Vollkorn; font-weight: 400; line-height: 30px; word-wrap: break-word">       With an enumerated number of strays more animals are deprived of their fundamental freedoms, facing predation, famine, illness, and numerous other undesired circumstances lowering general animal quality of life.<br/></span></div>
         <div style="width: 778.61px; height: 38.62px; left: 61px; top: 103px; position: absolute; color: #2F3061; font-size: 56px; font-family: Vollkorn; font-weight: 700; line-height: 72px; word-wrap: break-word">The Five Freedoms</div>
       </div>
