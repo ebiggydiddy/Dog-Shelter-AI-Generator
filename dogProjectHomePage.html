@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+  body {margin:0;}
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  </style>
 <body>
     <div style="width: 1680px; height: 960px; background: white; justify-content: center; align-items: flex-start; display: inline-flex">
         <div style="width: 840px; height: 960px; position: relative">
@@ -60,5 +94,10 @@
         <div style="width: 1021px; height: 40px; left: 65px; top: 60px; position: absolute; color: #2F3061; font-size: 56px; font-family: Vollkorn; font-weight: 700; line-height: 72px; word-wrap: break-word">The Problem of Overcrowding</div>
         <img style="width: 572px; height: 455px; left: 1030px; top: 204px; position: absolute; box-shadow: 15px 20px 4px rgba(0, 0, 0, 0.25)" src="https://via.placeholder.com/572x455" />
       </div>
+      <ul>
+        <li><a class="active" href="./dogProjectHomePage.html">Home</a></li>
+        <li><a href="./dogProject.HTML">Identifier</a></li>
+        <li><a href="./dogProjectVet.html">Vet Identifier</a></li>
+      </ul>
 </body>
 </html>
